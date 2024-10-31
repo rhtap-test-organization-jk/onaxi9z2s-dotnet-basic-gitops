@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: onaxi9z2s-dotnet-basic-gitops
+  description: This is GitOps manifest for onaxi9z2s-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: onaxi9z2s-dotnet-basic
+    jenkins.io/job-full-name: onaxi9z2s-dotnet-basic-gitops
+    backstage.io/kubernetes-id: onaxi9z2s-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:onaxi9z2s-dotnet-basic
